@@ -1,0 +1,56 @@
+<div class="bg-white rounded-xl shadow-sm p-6">
+  <form action="/admin/contact?_method=PUT" method="POST">
+    <div class="grid grid-cols-1 gap-6">
+      <div>
+        <label for="email" class="label">Email Address</label>
+        <input type="email" id="email" name="email" class="input" placeholder="contact@example.com" value="<%= contact.email %>" required>
+      </div>
+      
+      <div>
+        <label for="phone" class="label">Phone Number</label>
+        <input type="text" id="phone" name="phone" class="input" placeholder="+1 234-567-8900" value="<%= contact.phone %>" required>
+      </div>
+      
+      <div>
+        <label for="address" class="label">Address</label>
+        <textarea id="address" name="address" rows="2" class="input" placeholder="Your business address" required><%= contact.address %></textarea>
+      </div>
+      
+      <div>
+        <label for="whatsapp" class="label">WhatsApp Number (include country code, no spaces or symbols)</label>
+        <div class="flex">
+          <div class="flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <input type="text" id="whatsapp" name="whatsapp" class="input rounded-l-none" placeholder="12345678900" value="<%= contact.whatsapp %>" required>
+        </div>
+        <p class="text-xs text-gray-500 mt-1">Example: 12345678900 (no spaces, dashes, or plus sign)</p>
+      </div>
+      
+      <div class="pt-4">
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-save mr-2"></i>
+          Update Contact Information
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="mt-6 bg-white rounded-xl shadow-sm p-6">
+  <h3 class="text-md font-medium mb-4">WhatsApp Integration</h3>
+  
+  <div class="prose max-w-none">
+    <p class="text-gray-600 mb-4">
+      The WhatsApp number you enter above will be used for the "Order via WhatsApp" functionality throughout the website.
+    </p>
+    
+    <h4 class="font-medium text-gray-800 mb-2">How it works:</h4>
+    <ul class="list-disc pl-5 space-y-1 text-gray-600">
+      <li>When customers click the WhatsApp button next to a product, they'll be directed to WhatsApp</li>
+      <li>A pre-filled message with the product name, price, and link will be automatically created</li>
+      <li>You'll receive these messages directly to your WhatsApp account</li>
+      <li>Make sure your WhatsApp is active on the phone number you provide</li>
+    </ul>
+  </div>
+</div>

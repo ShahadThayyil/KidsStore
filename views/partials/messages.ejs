@@ -1,0 +1,23 @@
+<% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error) { %>
+<div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4 rounded" role="alert">
+  <p><%= error.msg %></p>
+</div>
+<% }); %> <% } %>
+
+<% if(success_msg != ''){ %>
+<div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4 rounded" role="alert">
+  <p><%= success_msg %></p>
+</div>
+<% } %>
+
+<% if(error_msg != ''){ %>
+<div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4 rounded" role="alert">
+  <p><%= error_msg %></p>
+</div>
+<% } %>
+
+<% if(error != ''){ %>
+<div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4 rounded" role="alert">
+  <p><%= error %></p>
+</div>
+<% } %>

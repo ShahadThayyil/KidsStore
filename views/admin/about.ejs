@@ -1,0 +1,56 @@
+<div class="bg-white rounded-xl shadow-sm p-6">
+  <form action="/admin/about?_method=PUT" method="POST">
+    <div class="grid grid-cols-1 gap-6">
+      <div>
+        <label for="title" class="label">Page Title</label>
+        <input type="text" id="title" name="title" class="input" placeholder="About Us" value="<%= about.title %>" required>
+      </div>
+      
+      <div>
+        <label for="content" class="label">Main Content</label>
+        <textarea id="content" name="content" rows="6" class="input" placeholder="Enter your company story" required><%= about.content %></textarea>
+      </div>
+      
+      <div>
+        <label for="mission" class="label">Our Mission</label>
+        <textarea id="mission" name="mission" rows="4" class="input" placeholder="Enter your mission statement" required><%= about.mission %></textarea>
+      </div>
+      
+      <div>
+        <label for="vision" class="label">Our Vision</label>
+        <textarea id="vision" name="vision" rows="4" class="input" placeholder="Enter your vision statement" required><%= about.vision %></textarea>
+      </div>
+      
+      <div class="pt-4">
+        <button type="submit" class="btn-primary">
+          <i class="fas fa-save mr-2"></i>
+          Update About Page
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="mt-6 bg-white rounded-xl shadow-sm p-6">
+  <h3 class="text-md font-medium mb-4">Page Preview</h3>
+  
+  <div class="border rounded-lg p-6 bg-gray-50">
+    <h1 class="text-2xl font-bold text-gray-800 mb-4"><%= about.title %></h1>
+    
+    <div class="prose max-w-none">
+      <p class="text-gray-600 mb-6"><%= about.content %></p>
+      
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-gray-800 mb-2">Our Mission</h2>
+          <p class="text-gray-600"><%= about.mission %></p>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h2 class="text-xl font-bold text-gray-800 mb-2">Our Vision</h2>
+          <p class="text-gray-600"><%= about.vision %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

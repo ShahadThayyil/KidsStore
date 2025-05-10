@@ -1,0 +1,157 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <!-- Stats Cards -->
+  <div class="bg-white rounded-xl shadow-sm p-6">
+    <div class="flex items-center">
+      <div class="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center mr-4">
+        <i class="fas fa-box text-xl text-primary-500"></i>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Total Products</p>
+        <h3 class="text-2xl font-bold"><%= stats.products %></h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bg-white rounded-xl shadow-sm p-6">
+    <div class="flex items-center">
+      <div class="w-12 h-12 rounded-lg bg-secondary-100 flex items-center justify-center mr-4">
+        <i class="fas fa-star text-xl text-secondary-500"></i>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Featured Products</p>
+        <h3 class="text-2xl font-bold"><%= stats.featured %></h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bg-white rounded-xl shadow-sm p-6">
+    <div class="flex items-center">
+      <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mr-4">
+        <i class="fas fa-check text-xl text-green-500"></i>
+      </div>
+      <div>
+        <p class="text-sm text-gray-500">Active Categories</p>
+        <h3 class="text-2xl font-bold">7</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+  <!-- Quick Actions -->
+  <div class="bg-white rounded-xl shadow-sm p-6">
+    <h2 class="text-lg font-bold mb-4">Quick Actions</h2>
+    
+    <div class="grid grid-cols-2 gap-4">
+      <a href="/admin/products/add" class="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors flex flex-col items-center justify-center text-center">
+        <i class="fas fa-plus-circle text-primary-500 text-xl mb-2"></i>
+        <span class="text-sm font-medium">Add New Product</span>
+      </a>
+      
+      <a href="/admin/featured" class="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors flex flex-col items-center justify-center text-center">
+        <i class="fas fa-star text-secondary-500 text-xl mb-2"></i>
+        <span class="text-sm font-medium">Manage Featured</span>
+      </a>
+      
+      <a href="/admin/about" class="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors flex flex-col items-center justify-center text-center">
+        <i class="fas fa-info-circle text-purple-500 text-xl mb-2"></i>
+        <span class="text-sm font-medium">Edit About Page</span>
+      </a>
+      
+      <a href="/admin/contact" class="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors flex flex-col items-center justify-center text-center">
+        <i class="fas fa-address-book text-green-500 text-xl mb-2"></i>
+        <span class="text-sm font-medium">Edit Contact Info</span>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Tips -->
+  <div class="bg-white rounded-xl shadow-sm p-6">
+    <h2 class="text-lg font-bold mb-4">Admin Tips</h2>
+    
+    <ul class="space-y-3">
+      <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+        <span class="text-gray-600">Add transparent PNG images for the best presentation</span>
+      </li>
+      
+      <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+        <span class="text-gray-600">Feature your best products on the homepage</span>
+      </li>
+      
+      <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+        <span class="text-gray-600">Keep your product descriptions clear and engaging</span>
+      </li>
+      
+      <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+        <span class="text-gray-600">Make sure WhatsApp number is correctly formatted</span>
+      </li>
+      
+      <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+        <span class="text-gray-600">Regularly update your featured products</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Recent Activity -->
+<div class="mt-8 bg-white rounded-xl shadow-sm p-6">
+  <h2 class="text-lg font-bold mb-4">Recent Activity</h2>
+  
+  <div class="overflow-hidden">
+    <table class="min-w-full">
+      <thead>
+        <tr class="bg-gray-50">
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <tr>
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+              Added
+            </span>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            New product
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            <%= new Date().toLocaleDateString() %>
+          </td>
+        </tr>
+        <tr>
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+              Updated
+            </span>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            About page
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            <%= new Date().toLocaleDateString() %>
+          </td>
+        </tr>
+        <tr>
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+              Featured
+            </span>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            Product featured
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            <%= new Date().toLocaleDateString() %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

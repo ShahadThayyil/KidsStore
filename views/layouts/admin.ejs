@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | Admin Panel</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-100">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <%- include('../partials/admin-sidebar') %>
+    
+    <!-- Main content -->
+    <div class="flex-1 overflow-auto">
+      <!-- Top Nav -->
+      <div class="bg-white shadow-sm">
+        <div class="px-6 py-4 flex items-center justify-between">
+          <h1 class="text-xl font-bold text-gray-800">
+            <%= title %>
+          </h1>
+          <div>
+            <a href="/admin/logout" class="text-sm text-gray-600 hover:text-primary-500">
+              <i class="fas fa-sign-out-alt mr-1"></i> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Content -->
+      <div class="p-6">
+        <%- include('../partials/messages') %>
+        <%- body %>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JS -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

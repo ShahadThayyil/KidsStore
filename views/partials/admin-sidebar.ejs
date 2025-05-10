@@ -1,0 +1,46 @@
+<aside class="w-64 bg-gray-800 text-white">
+  <div class="p-6">
+    <div class="text-xl font-heading font-bold mb-6">
+      <a href="/admin/dashboard">Kids<span class="text-secondary-400">Store</span> Admin</a>
+    </div>
+    
+    <nav class="space-y-1">
+      <a href="/admin/dashboard" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors <%= title === 'Admin Dashboard' ? 'bg-gray-700 text-white' : '' %>">
+        <i class="fas fa-tachometer-alt w-5 mr-3"></i>
+        <span>Dashboard</span>
+      </a>
+      
+      <a href="/admin/products" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors <%= title === 'Manage Products' || title === 'Add New Product' || title === 'Edit Product' ? 'bg-gray-700 text-white' : '' %>">
+        <i class="fas fa-box w-5 mr-3"></i>
+        <span>Products</span>
+      </a>
+      
+      <a href="/admin/featured" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors <%= title === 'Manage Featured Products' ? 'bg-gray-700 text-white' : '' %>">
+        <i class="fas fa-star w-5 mr-3"></i>
+        <span>Featured Products</span>
+      </a>
+      
+      <a href="/admin/about" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors <%= title === 'Manage About Page' ? 'bg-gray-700 text-white' : '' %>">
+        <i class="fas fa-info-circle w-5 mr-3"></i>
+        <span>About Page</span>
+      </a>
+      
+      <a href="/admin/contact" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors <%= title === 'Manage Contact Page' ? 'bg-gray-700 text-white' : '' %>">
+        <i class="fas fa-address-book w-5 mr-3"></i>
+        <span>Contact Info</span>
+      </a>
+      
+      <div class="border-t border-gray-700 my-2 pt-2">
+        <a href="/" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors">
+          <i class="fas fa-home w-5 mr-3"></i>
+          <span>View Site</span>
+        </a>
+        
+        <a href="/admin/logout" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors">
+          <i class="fas fa-sign-out-alt w-5 mr-3"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</aside>
