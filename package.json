@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "tailwind:css": "npx @tailwindcss/cli -i ./public/css/tailwind.css -o ./public/css/style.css --watch",
+    "tailwind:css": "npx tailwindcss -i ./public/css/tailwind.css -o ./public/css/style.css --watch",
     "build": "npm run tailwind:css && node app.js"
   },
   "dependencies": {
